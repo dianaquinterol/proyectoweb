@@ -1,0 +1,95 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Iniciar Sesión</title>
+  </head>
+  <body>
+      <div id="div_isesion" > 
+        <main role="main" class="container my-auto" style="background-color: rgb(224, 240, 240);">
+            <div class="row">
+                <div id="login" class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-12">
+                    <h2 class="tex-center">Bienvenidos</h2>
+            <form>
+                <div class="form-group">
+                    <label for="correo">E-mail</label>
+                    <input id="correo" name="correo"
+                        class="form-control" type="email"
+                        placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <label for="palabraSecreta">Contraseña</label>
+                    <input id="palabraSecreta" name="palabraSecreta"
+                        class="form-control" type="password"
+                        placeholder="Contraseña">
+                </div>
+                <button type="button" class="btn btn-primary mb-2">Entrar</button>
+                <br>
+                <a href="#" onclick="LlamarRegistrarUsuario()">Crear Nuevo Usuario</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" onclick="OlvidoContraseña()">Olvidaste la Contraseña?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </form> 
+            </div>
+
+      </div>
+      <div id="div_adUsuario" style="display: none;">
+        <main role="main" class="container my-auto" style="background-color: rgb(224, 240, 240);">
+
+            <div class="row">
+                <div id="login" class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-12">
+                    <h2 class="tex-center">Crear Nuevo Usuario</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nu_nombre">Nombre</label>
+                        <input id="nu_nombre" name="nu_nombre"
+                        class="form-control" type="text"
+                        placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-group">
+                        <label form="nu_correo">E-mail</label>
+                        <input id="nu_correo" name="nu_correo"
+                            class="form-control" type="email"       
+                            placeholder="Usuario">       
+                    </div>
+                    <div class="form-group">
+                        <label for="nu_pwd1">Contraseña</label>
+                        <input id="nu_pwd1" name="nu_pwd1"
+                            class="form-control" type="password"
+                            placeholder="Confirma Contraseña">
+                        <br>
+                        <button type="button" class="btn btn-primary mb-2" onclick="adicionarUsuario('user1','user1@usa.com', 'clave1')"> Crear</button>
+                       <br>
+                       ¿Ya tienes cuenta? <a href="#" onclick="LlamarIniciarSesion()"> Inicia Sesion aquí</a>
+                       <br></br> 
+                    </div>
+
+                </form>    
+                </div>
+            </div>
+    
+    
+  
+    
+    <!-- Optional JavaScript -->
+    <script>
+        function LlamarRegistrarUsuario()
+        {
+            document.getElementById("div_isesion").style.display='none';
+            document.getElementById("div_adUsuario").style.display='block';
+        }
+        function LlamarIniciarSesion()
+        {
+        document.getElementById("div_isesion").style.display='block';
+        document.getElementById("div:adUsuario").style.display='none';
+        }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
